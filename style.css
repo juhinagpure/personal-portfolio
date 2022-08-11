@@ -1,0 +1,159 @@
+*{
+   margin:0; padding:0;
+   box-sizing: border-box;
+   font-family:Verdana, Geneva, Tahoma, sans-serif; 
+   text-transform: capitalize;
+   outline: none; border: none;
+   text-decoration: none;
+   font-weight: normal;
+}
+
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body{
+overflow: hidden;
+min-height: 100vh;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+background: linear-gradient(deeppink , purple);
+padding: 5.5rem;
+}
+
+.btn{
+    font-size: 2rem;
+    padding:.7rem 4rem;
+    background: rgba(255,255,255,.2);
+    color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    margin-top: 1rem ;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+
+.btn:hover{
+   background: rgba(255,255,255,.5);
+   color: #555; 
+}
+
+
+
+header{
+    width: 35rem;
+    background: rba(255,255,255,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    backdrop-filter: blur(.4rem);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+header.user{
+    padding-top: 2rem;
+}
+
+.profile-img{
+    margin:1rem 0;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 1rem rgba(255,255,255,.2);
+}
+
+header.user .name{
+    font-size: 3rem;
+    color:#fff;
+    padding: .5rem 0;
+
+}
+
+header.user .post{
+    font-size: 1.8rem;
+    color: #eee;
+    font-weight: lighter;
+
+}
+
+header .navbar{
+   padding:1rem 3rem;
+}
+
+header .navbar ul li{
+  margin: 1rem 0;
+  list-style: none;  
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    font-size: 2rem ;
+    color: #fff;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    border-radius: 1rem;
+    transition: all .2s linear;
+}
+
+header .navbar ul li a:hover{
+    background: rgba(255,255,255,.5);
+    color:#555;
+    transition: none;
+}
+.container{
+    height:52rem ;
+    width: 80rem;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    backdrop-filter: blur(.4rem);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.home{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    padding-bottom:10rem ;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: #eee;
+
+}
+.home .name span{
+    font-size: 4rem;
+    color: #fff;
+}
+
+.home .post{
+    padding: 1rem 0;
+}
+
+
+.home .post span {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.home .share{
+    position: absolute;
+    left:50% ;bottom:5rem;
+    transform:translate(-50%);
+    display:flex;
+    padding:1rem;
+    border-radius: 1rem;
+    background: rgba(255,255,255,.1);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+
