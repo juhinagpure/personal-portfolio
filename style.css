@@ -195,11 +195,11 @@ header .navbar ul li a:hover{
     padding:.5rem 0;
 }
 
-.about .skills{
+.about .languages{
     padding:1rem 0;
 }
 
-.about .skills .progress{
+.about .languages .progress{
     margin:1.5rem 0;
     padding:1rem;
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
@@ -207,14 +207,14 @@ header .navbar ul li a:hover{
     border-radius: 1rem;
 }
 
-.about .skills .progress h3{
+.about .languages .progress h3{
     display: flex;
     justify-content: space-between;
     font-size: 2rem;
     color:#fff;
 }
 
-.about .skills .progress .bar{
+.about .languages .progress .bar{
     position: relative;
     width: 100%;
     height:.3rem;
@@ -222,7 +222,7 @@ header .navbar ul li a:hover{
     background:#555;
 }
 
-.about .skills .progress .bar span{
+.about .languages .progress .bar span{
     position: absolute;
     top:0; left: 0;
     height:100%;
@@ -230,29 +230,29 @@ header .navbar ul li a:hover{
     background:#fff;
 }
 
-.about .skills .progress:nth-child(1) .bar span{
+.about .languages .progress:nth-child(1) .bar span{
     width:95%;
 }
 
-.about .skills .progress:nth-child(2) .bar span{
+.about .languages .progress:nth-child(2) .bar span{
     width:85%;
 }
 
-.about .skills .progress:nth-child(3) .bar span{
+.about .languages .progress:nth-child(3) .bar span{
     width:65%;
 }
 
-.about .skills .progress:nth-child(4) .bar span{
+.about .languages .progress:nth-child(4) .bar span{
     width:70%;
 }
 
-.service .box-container{
+.skills .box-container{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.service .box-container .box{
+.skills .box-container .box{
     margin:1rem;
     padding:1rem;
     border-radius: 1rem;
@@ -262,13 +262,13 @@ header .navbar ul li a:hover{
     width:32rem;
 }
 
-.service .box-container .box i{
+.skills .box-container .box i{
     color:#fff;
     font-size: 4.5rem;
     padding:1rem 0;
 }
 
-.service .box-container .box p{
+.skills .box-container .box p{
     color:#eee;
     font-size: 1.3rem;
     padding:.5rem 5rem;
