@@ -246,13 +246,13 @@ header .navbar ul li a:hover{
     width:70%;
 }
 
-.skills .box-container{
+.skills .box-container, .projects .box-container{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.skills .box-container .box{
+.skills .box-container .box, .projects .box-container .box{
     margin:1rem;
     padding:1rem;
     border-radius: 1rem;
@@ -268,11 +268,24 @@ header .navbar ul li a:hover{
     padding:1rem 0;
 }
 
+.skills .box-container .box img {
+    width: 5.5rem;
+    padding: .3rem 0;
+}
+
 .skills .box-container .box p{
     color:#eee;
     font-size: 1.3rem;
-    padding:.5rem 5rem;
+    padding:.5rem 5rem; 
 }
+
+/* Projects Section */
+.projects .box-container .project-heading {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+/* End of Project Section */
 
 .education .box-container{
     display: flex;
