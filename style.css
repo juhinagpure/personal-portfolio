@@ -280,11 +280,40 @@ header .navbar ul li a:hover{
 }
 
 /* Projects Section */
+.projects .box-container {
+    height: 50rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-around;
+}
+
+.projects .box-container .box {
+    width: 30rem;
+}
+
 .projects .box-container .project-heading {
     font-size: 2rem;
     color: #fff;
     padding: 1rem 0;
 }
+
+.video-wrapper {
+    margin: 1rem;
+}
+
+.video {
+    width: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    transition: all .5s;
+}
+
+.video:hover {
+    opacity: 1;
+}
+
+
 /* End of Project Section */
 
 .education .box-container{
