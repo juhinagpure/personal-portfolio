@@ -23,12 +23,12 @@ videos.forEach((video) => {
     video.pause();
   });
 });
-
-// var type = new Typed(".typing-text", {
-//   strings: ["web designer", "front end developer", "Artist", "Guider"],
-//   typeSpeed: 120,
-//   loop: true,
-// });
+ 
+var type = new Typed(".typing-text", {
+  strings: ["web designer", "front end developer", "Artist", "Guider"],
+  typeSpeed: 120,
+  loop: true,
+});
 
 menuOpen.addEventListener("click", () => {
   console.log("clicked");
@@ -38,3 +38,5 @@ menuOpen.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
   header.classList.remove("display");
 });
+
+
