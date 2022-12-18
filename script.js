@@ -3,6 +3,7 @@ let themeColor = document.querySelectorAll(".theme-toggler span");
 const menuOpen = document.querySelector(".menu-open");
 const menuClose = document.querySelector(".menu-close");
 const header = document.querySelector(".header");
+const text = document.querySelector(".typing-text");
 
 themeColor.forEach((color) =>
   color.addEventListener("click", () => {
@@ -23,9 +24,26 @@ videos.forEach((video) => {
     video.pause();
   });
 });
- 
-var type = new Typed(".typing-text", {
-  strings: ["web designer", "front end developer", "Artist", "Guider"],
+
+const textLoad = () => {
+  setTimeout(() => {
+    text.textContent = "Frontend Developer";
+  }, 0);
+  setTimeout(() => {
+    text.textContent = "web designer";
+  }, 4000);
+  setTimeout(() => {
+    text.textContent = "Artist";
+  }, 8000);
+  setTimeout(() => {
+    text.textContent = "Guider";
+  }, 12000);
+};
+
+textLoad();
+
+var typed = new Typed(".typing-text", {
+  strings: ["web designer", "frontend developer", "Artist", "Guider"],
   typeSpeed: 120,
   loop: true,
 });
@@ -38,5 +56,3 @@ menuOpen.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
   header.classList.remove("display");
 });
-
-
