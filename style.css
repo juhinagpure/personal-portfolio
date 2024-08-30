@@ -221,6 +221,30 @@ header .navbar ul li a:hover {
 
 .about .languages {
   padding: 1rem 0;
+  overflow-y: auto; 
+  max-height: 400px; 
+  padding-right: 10px; 
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2); 
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.about .languages::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.about .languages::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Track color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.about .languages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5); /* Thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.about .languages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7); /* Thumb color on hover */
 }
 
 .about .languages .progress {
@@ -271,22 +295,22 @@ header .navbar ul li a:hover {
   width: 70%;
 }
 
-.skills .box-container,
-.projects .box-container {
+.skills .box-container {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping to create two columns */
+  justify-content: space-between; /* Space between columns */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  max-height: 500px; /* Set a maximum height */
 }
 
-.skills .box-container .box,
-.projects .box-container .box {
-  margin: 1rem;
+.skills .box-container .box {
+  width: calc(50% - 1rem); /* Set width to 50% minus margin */
+  margin: 0.5rem; /* Add margin for spacing */
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.2);
   text-align: center;
-  width: 32rem;
 }
 
 .skills .box-container .box i {
@@ -308,11 +332,48 @@ header .navbar ul li a:hover {
 
 /* Projects Section */
 .projects .box-container {
-  height: 50rem;
-  overflow: hidden;
-  overflow-y: scroll;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow-y: auto;
+  max-height: 500px;
+  padding: 10px;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2);
+}
+
+.projects .box-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.projects .box-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.projects .box-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.projects .box {
+  width: calc(50% - 5px);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.projects .box:hover {
+  transform: scale(1.05);
+}
+
+.projects .video-wrapper {
+  width: 100%; 
+  overflow: hidden; 
+  border-radius: 10px; 
 }
 
 .projects .box-container .box {
@@ -323,6 +384,9 @@ header .navbar ul li a:hover {
   font-size: 2rem;
   color: #fff;
   padding: 1rem 0;
+  margin-bottom: 1rem; 
+  text-align: center;
+  margin: 0; 
 }
 
 .video-wrapper {
@@ -472,6 +536,48 @@ header .navbar ul li a:hover {
   margin: 2rem 2.5rem;
   box-shadow: 0 0 0 0.5rem rgba(255, 255, 255, 0.2),
     0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+/* Add responsive styles for mobile screens */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .btn {
+    font-size: 1.5rem; /* Smaller button font size */
+    padding: 0.5rem 2rem; /* Adjust button padding */
+  }
+
+  .heading {
+    font-size: 2.5rem; /* Smaller heading font size */
+  }
+
+  .home h3,
+  .about .content h3 {
+    font-size: 2rem; /* Smaller section headings */
+  }
+
+  .skills .box-container .box {
+    width: 100%; /* Full width for boxes */
+    margin: 0.5rem 0; /* Adjust margin */
+  }
+
+  .projects .box {
+    width: 100%; /* Full width for project boxes */
+  }
+
+  .education .box-container .box {
+    width: 100%; /* Full width for education boxes */
+  }
+
+  .contact .row {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .contact .row form .box {
+    width: 100%; /* Full width for form inputs */
+  }
 }
 
 @media (max-width: 500px) {
