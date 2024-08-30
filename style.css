@@ -657,5 +657,26 @@ header .navbar ul li a:hover {
   .contact .row form .box {
     width: 100%;
   }
+
+  /* Center the projects section for mobile view */
+  .projects .box-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 1rem; /* Add some padding */
+  }
+
+  .projects .box {
+    width: 90%; /* Adjust width for better fit */
+    margin: 1rem 0; /* Add margin for spacing */
+  }
+
+  /* Adjust theme toggler position */
+  .theme-toggler {
+    position: fixed; /* Make it fixed */
+    bottom: 2rem; /* Move it up from the bottom */
+    right: 2rem; /* Adjust right position */
+    z-index: 100; /* Ensure it stays on top */
+  }
 }
 
