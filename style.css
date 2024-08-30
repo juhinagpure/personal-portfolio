@@ -221,30 +221,6 @@ header .navbar ul li a:hover {
 
 .about .languages {
   padding: 1rem 0;
-  overflow-y: auto; 
-  max-height: 400px; 
-  padding-right: 10px; 
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2); 
-}
-
-/* For WebKit browsers (Chrome, Safari) */
-.about .languages::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-}
-
-.about .languages::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2); /* Track color */
-  border-radius: 10px; /* Rounded corners */
-}
-
-.about .languages::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5); /* Thumb color */
-  border-radius: 10px; /* Rounded corners */
-}
-
-.about .languages::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.7); /* Thumb color on hover */
 }
 
 .about .languages .progress {
@@ -297,14 +273,14 @@ header .navbar ul li a:hover {
 
 .skills .box-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping to create two columns */
-  justify-content: space-between; /* Space between columns */
+  flex-wrap: wrap;
+  justify-content: space-between; /* Align items in two columns */
+  height: 500px; /* Set a fixed height */
   overflow-y: auto; /* Enable vertical scrollbar */
-  max-height: 500px; /* Set a maximum height */
 }
 
 .skills .box-container .box {
-  width: calc(50% - 1rem); /* Set width to 50% minus margin */
+  width: calc(50% - 1rem); /* Set each box to take half the width minus margin */
   margin: 0.5rem; /* Add margin for spacing */
   padding: 1rem;
   border-radius: 1rem;
@@ -331,62 +307,33 @@ header .navbar ul li a:hover {
 }
 
 /* Projects Section */
+.projects {
+  padding: 2rem 0;
+}
+
+.projects .project-heading {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .projects .box-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  overflow-y: auto;
-  max-height: 500px;
-  padding: 10px;
-  gap: 10px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2);
-}
-
-.projects .box-container::-webkit-scrollbar {
-  width: 0;
-}
-
-.projects .box-container::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.projects .box-container::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  justify-content: space-between; /* Align items in two columns */
+  height: 450px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrollbar */
 }
 
 .projects .box {
-  width: calc(50% - 5px);
-  margin-bottom: 10px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
-}
-
-.projects .box:hover {
-  transform: scale(1.05);
-}
-
-.projects .video-wrapper {
-  width: 100%; 
-  overflow: hidden; 
-  border-radius: 10px; 
-}
-
-.projects .box-container .box {
-  width: 30rem;
-}
-
-.projects .box-container .project-heading {
-  font-size: 2rem;
-  color: #fff;
-  padding: 1rem 0;
-  margin-bottom: 1rem; 
+  width: calc(50% - 1rem); /* Set each box to take half the width minus margin */
+  margin: 0.5rem; /* Add margin for spacing */
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin: 0; 
 }
 
 .video-wrapper {
@@ -538,48 +485,6 @@ header .navbar ul li a:hover {
     0 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 
-/* Add responsive styles for mobile screens */
-@media (max-width: 768px) {
-  body {
-    padding: 1rem; /* Adjust padding for smaller screens */
-  }
-
-  .btn {
-    font-size: 1.5rem; /* Smaller button font size */
-    padding: 0.5rem 2rem; /* Adjust button padding */
-  }
-
-  .heading {
-    font-size: 2.5rem; /* Smaller heading font size */
-  }
-
-  .home h3,
-  .about .content h3 {
-    font-size: 2rem; /* Smaller section headings */
-  }
-
-  .skills .box-container .box {
-    width: 100%; /* Full width for boxes */
-    margin: 0.5rem 0; /* Adjust margin */
-  }
-
-  .projects .box {
-    width: 100%; /* Full width for project boxes */
-  }
-
-  .education .box-container .box {
-    width: 100%; /* Full width for education boxes */
-  }
-
-  .contact .row {
-    flex-direction: column; /* Stack elements vertically */
-  }
-
-  .contact .row form .box {
-    width: 100%; /* Full width for form inputs */
-  }
-}
-
 @media (max-width: 500px) {
   html {
     font-size: 50%;
@@ -657,26 +562,6 @@ header .navbar ul li a:hover {
   .contact .row form .box {
     width: 100%;
   }
-
-  /* Center the projects section for mobile view */
-  .projects .box-container {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 1rem; /* Add some padding */
-  }
-
-  .projects .box {
-    width: 90%; /* Adjust width for better fit */
-    margin: 1rem 0; /* Add margin for spacing */
-  }
-
-  /* Adjust theme toggler position */
-  .theme-toggler {
-    position: fixed; /* Make it fixed */
-    bottom: 2rem; /* Move it up from the bottom */
-    right: 2rem; /* Adjust right position */
-    z-index: 100; /* Ensure it stays on top */
-  }
 }
+
 
