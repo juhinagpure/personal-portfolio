@@ -564,16 +564,4 @@ header .navbar ul li a:hover {
   }
 }
 
-/* Media Query for Mobile Responsiveness */
-@media (max-width: 768px) {
-  .projects .box-container {
-    height: auto; /* Remove fixed height for smaller screens */
-  }
-
-  .projects .box {
-    width: 100%; /* Make each box full width */
-    margin: 0.5rem 0; /* Adjust margin for spacing */
-  }
-}
-
 
