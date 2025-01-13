@@ -758,7 +758,7 @@
       </section>
 
       <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-      <script>
+      <!-- <script>
         (function () {
           emailjs.init("RdOu9O35-Rhy5IPsC"); // Replace with your EmailJS public key
         })();
@@ -774,6 +774,49 @@
             },
             function (error) {
               alert("Failed to send message. Please try again later.");
+            }
+          );
+        });
+      </script> -->
+      <script>
+        // Initialize EmailJS with your public key
+        (function () {
+          emailjs.init("RdOu9O35-Rhy5IPsC"); // Replace with your EmailJS public key
+        })();
+
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting the default way
+
+          // Send the message to your email using the form data
+          emailjs.sendForm("service_510tdlt", "template_rihvwxc", form).then(
+            function (response) {
+              // Success callback
+              alert("Message sent successfully!");
+              form.reset(); // Reset form after successful submission
+
+              // Send auto-reply to the user (optional, based on your template)
+              emailjs
+                .send("service_510tdlt", "template_auto_reply", {
+                  from_name: "Your Website", // Customize the sender's name
+                  reply_to: form.querySelector('[name="reply_to"]').value, // User's email
+                  message:
+                    "Thank you for contacting us. We will get back to you shortly.", // Auto-reply message
+                })
+                .then(
+                  function (response) {
+                    console.log("Auto-reply sent:", response);
+                  },
+                  function (error) {
+                    console.error("Failed to send auto-reply:", error);
+                  }
+                );
+            },
+            function (error) {
+              // Error callback
+              alert("Failed to send message. Please try again later.");
+              console.error("Error:", error);
             }
           );
         });
