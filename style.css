@@ -346,7 +346,10 @@ header .navbar ul li a:hover {
 .video-wrapper {
   margin: 1rem;
 }
-
+.box p strong {
+  font-weight: bold;
+  color: pink;
+}
 .video {
   width: 100%;
   border-radius: 0.5rem;
