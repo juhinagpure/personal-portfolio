@@ -222,7 +222,10 @@ header .navbar ul li a:hover {
 .about .languages {
   padding: 1rem 0;
 }
-
+.languages {
+  max-height: 400px; /* Adjust the height as needed */
+  overflow-y: auto;
+}
 .about .languages .progress {
   margin: 1.5rem 0;
   padding: 1rem;
@@ -280,7 +283,9 @@ header .navbar ul li a:hover {
 }
 
 .skills .box-container .box {
-  width: calc(50% - 1rem); /* Set each box to take half the width minus margin */
+  width: calc(
+    50% - 1rem
+  ); /* Set each box to take half the width minus margin */
   margin: 0.5rem; /* Add margin for spacing */
   padding: 1rem;
   border-radius: 1rem;
@@ -327,7 +332,9 @@ header .navbar ul li a:hover {
 }
 
 .projects .box {
-  width: calc(50% - 1rem); /* Set each box to take half the width minus margin */
+  width: calc(
+    50% - 1rem
+  ); /* Set each box to take half the width minus margin */
   margin: 0.5rem; /* Add margin for spacing */
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.2);
@@ -563,5 +570,3 @@ header .navbar ul li a:hover {
     width: 100%;
   }
 }
-
-
