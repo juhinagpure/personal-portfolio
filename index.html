@@ -668,7 +668,7 @@
       </section>
 
       <!-- contact section  -->
-      <section class="contact" id="contact">
+      <!-- <section class="contact" id="contact">
         <h1 class="heading">contact me</h1>
 
         <div class="row">
@@ -699,7 +699,85 @@
             </div>
           </div>
         </div>
+      </section> -->
+      <section class="contact" id="contact">
+        <h1 class="heading">Contact Me</h1>
+
+        <div class="row">
+          <form id="contact-form">
+            <input
+              type="text"
+              class="box"
+              name="first_name"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              class="box"
+              name="last_name"
+              placeholder="Last Name"
+              required
+            />
+            <input
+              type="email"
+              class="box"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <input
+              type="text"
+              class="box"
+              name="project"
+              placeholder="Your Project"
+              required
+            />
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              class="box message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <input type="submit" value="Submit" class="btn" />
+          </form>
+
+          <div class="content">
+            <div class="icons">
+              <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+              <p>Nagpur, Maharashtra, India 440034</p>
+            </div>
+            <div class="icons">
+              <h3><i class="fas fa-envelope"></i> Email</h3>
+              <p>juhinagpure56@gmail.com</p>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+      <script>
+        (function () {
+          emailjs.init("RdOu9O35-Rhy5IPsC"); // Replace with your EmailJS public key
+        })();
+
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          emailjs.sendForm("service_510tdlt", "template_rihvwxc", form).then(
+            function (response) {
+              alert("Message sent successfully!");
+              form.reset();
+            },
+            function (error) {
+              alert("Failed to send message. Please try again later.");
+            }
+          );
+        });
+      </script>
     </div>
 
     <!-- content section ends -->
